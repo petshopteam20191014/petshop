@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-public class qqaqaqqaqa {
+public class wewewewee {
  private int aaa;
  private int aaaaa;
  
