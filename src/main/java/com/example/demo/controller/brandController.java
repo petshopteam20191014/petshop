@@ -18,12 +18,6 @@ public class brandController {
 	public List<Brand> selectAllBrand(){
 		return brandService.selectAllBrand();
 		
-		
-		
-		
-		
-		
-		
 	}
 	
 }
