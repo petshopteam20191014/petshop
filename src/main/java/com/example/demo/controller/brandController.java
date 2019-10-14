@@ -17,6 +17,8 @@ public class brandController {
 	@RequestMapping("selectAllBrand")
 	public List<Brand> selectAllBrand(){
 		return brandService.selectAllBrand();
+		
+		
 	}
 	
 }
