@@ -15,6 +15,7 @@ public class UserController {
 	public void insertUser(@RequestParam String uname,@RequestParam String password){
 	
 		userService.insertUser(uname, password);
+		
 	}
 	
 	
