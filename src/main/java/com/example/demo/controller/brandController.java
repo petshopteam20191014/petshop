@@ -19,4 +19,6 @@ public class brandController {
 		return brandService.selectAllBrand();
 	}
 	
+	
+	
 }
