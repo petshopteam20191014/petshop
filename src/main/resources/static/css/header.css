@@ -1,0 +1,242 @@
+#header{
+	/* background-color: aqua; */
+	width: 100%;
+	float: left;
+	/* height: 20px; */
+}
+
+#header .conWidth{
+	/* background-color: gray; */
+	/* border: 1px solid red; */
+	/* height: 10px; */
+	width: 1280px;
+	float: left;
+	margin-left: 38px;
+	padding: 10px 0px 10px 10px;
+}
+#header .conWidth .logo{
+	float: left;
+	/* border: 1px solid yellow; */
+	margin-left: 60px;
+	margin-top: -6px;
+}
+#header .conWidth a img{
+	width:300px;
+}
+#header .conWidth .buy{
+	border: 1px solid white;
+	float: right;
+	margin-top: 25px;
+	margin-right: 55px;
+	padding: 6px 8px 4px 4px;
+	background-color: #F8F8F6;
+}
+#header .conWidth  li{
+	float: left;
+	font-size: 15px;
+	margin-left: 5px;
+	color: gray;
+	font-weight: bold;
+}
+#header .conWidth .user{
+	border: 1px solid white;
+	float: right;
+	margin-top: 25px;
+	padding: 6px 8px 4px 4px;
+	margin-right: 40px;
+	background-color: #F8F8F6;
+}
+#header .conWidth .search{
+	/* border: 1px solid yellow; */
+	float: left;
+	margin-top: 20px;
+	padding: 6px 8px 4px 4px;
+	margin-left: 90px;
+}
+#header .conWidth .search div{
+	float: left;
+}
+#header .conWidth .search div input{
+	width: 360px;
+	height: 34px;
+	/* border-color: coral; */
+	border: 3px solid coral;
+}
+#header .conWidth .search div button{
+	height: 39.5px;
+	width: 55px;
+	background-color: coral;
+	border: 0;
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+}
+#header .conWidth .buyAllInfo{
+	background-color: white;
+	width: 360px;
+	height: 120px;
+	position:absolute;
+	left: 912px;
+	top: 74px;
+	border: 1px solid whitesmoke;
+	display: none;
+	font-size: 20px;
+	text-align: center;
+	line-height: 120px;
+}
+#header .conWidth .buy:hover~.buyAllInfo{
+	display: block;
+}
+#header .conWidth .buyAllInfo:hover{
+	display: block;
+}
+#header .conWidth .buy:hover{
+	background-color: white;
+	border: 1px solid whitesmoke;
+}
+#header .conWidth .userAllInfo{
+	background-color: white;
+	width: 360px;
+	height: 180px;
+	position:absolute;
+	left: 746px;
+	top: 74px;
+	border: 1px solid whitesmoke;
+	display: none;
+}
+#header .conWidth .user:hover~.userAllInfo{
+	display: block;
+}
+#header .conWidth .userAllInfo:hover{
+	display: block;
+}
+#header .conWidth .user:hover{
+	background-color: white;
+	border: 1px solid whitesmoke;
+}
+#header .conWidth .userAllInfo div:first-of-type{
+	/* background-color: yellow; */
+	height: 40px;
+	line-height: 40px;
+	/* text-align: center; */
+	border-bottom: 1px solid whitesmoke;
+	font-size: 14px;
+	font-weight: bold;
+}
+#header .conWidth .userAllInfo div:first-of-type a:first-of-type{
+	padding-left: 33px;
+	padding-right: 40px;
+}
+#header .conWidth .userAllInfo div:first-of-type span{
+	margin-left: 10px;
+}
+#header .conWidth .userAllInfo div:last-of-type li{
+	float: left;
+	padding-left: 30px;
+	padding-right: 70px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+#header .conWidth .userAllInfo div:last-of-type span{
+	margin-left: 8px;
+}
+#header .conWidth .userAllInfo a{
+	color:gray;
+}
+#header .conWidth .userAllInfo a:hover{
+	color: coral;
+}
+
+#header .mainNav{
+	width: 100%;
+	float: left;
+	background-color: coral;
+	height: 44px;
+}
+#header .mainNav li{
+	float: left;
+	font-size: 18px;
+	line-height: 44px;
+	color: #FFFCE7;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-weight: bold;
+}
+#header .mainNav li a{
+	color: #FFFCE7;
+}
+#header .mainNav li:first-of-type{
+	margin-left: 85px;
+	padding-left: 30px;
+	padding-right: 37px;
+	background-color: chocolate;
+}
+#header .mainNav li:hover{
+	background-color: chocolate;
+}
+#header .mainNav li a:hover{
+	text-decoration: none;
+}
+#header .mainNav li img{
+	position: relative;
+	left: 3px;
+	top: 5px;
+	margin-left: 10px;
+}
+
+
+#header .mainNav01{
+	/* border: 1px solid red; */
+	position: absolute;
+	top: 156px;
+	left: 85px;
+}
+#header .mainNav01 ul{
+	width: 207px;	
+	background: url(../img/n_menu_bg012_n.png) no-repeat 0 3.5px;
+	background-size: cover;
+	border: 2px solid coral;
+	background-color: ghostwhite;
+	/* border-right:0 ; */
+}
+#header .mainNav01 li{
+	width: 173px;
+	height: 42.5px;
+	text-align:left;
+	line-height: 42.5px;
+	padding-left: 32px;
+	border: 1px solid ghostwhite;
+	/* color: gray; */
+	/* font-weight: bold; */
+}
+#header .mainNav01 li:hover{
+	border-color:chocolate;
+	border-right: 2px solid ghostwhite;
+	border-left: 2px solid coral;
+	
+}
+#header .mainNav01 li a{
+	color: black;
+}
+#header .mainNav01 li:hover a{
+	font-size: 14px;
+	color: coral;
+}
+
+#header .mainNav02{
+	background-color: ghostwhite;
+	width: 650px;
+	height: 401px;
+	position: absolute;
+	top: 156px;
+	left: 296px;
+	border: 2px solid coral;
+	border-left:0;
+	display: none;
+}
+#header .mainNav01:hover~.mainNav02{
+	display: block;
+}
+#header .mainNav02:hover{
+	display: block;
+}

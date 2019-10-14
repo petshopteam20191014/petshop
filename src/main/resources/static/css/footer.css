@@ -1,0 +1,32 @@
+#footer{
+	float: left;
+	width: 100%;
+	margin-top: 30px;
+}
+#footer div:first-of-type li{
+	width: 20%;
+	background: #F8F8F6;
+	height: 90px;
+	float: left;
+	padding-top: 30px;
+	overflow: hidden;
+}
+#footer div:first-of-type li p{
+	height: auto;
+	width: 100%;
+	margin-left: 110px;
+}
+#footer div:first-of-type li p:first-of-type{
+	font-size: 18px;
+	color: coral;
+}
+#footer div:first-of-type li p:last-of-type{
+	color: #666666;
+}
+#footer div:last-of-type{
+	text-align: center;
+	font-size: 13px;
+}
+#footer div:last-of-type p{
+	margin-top: 2px;
+}

@@ -1,0 +1,26 @@
+
+/* 主体 */
+#content{
+	width: 100%;
+	float: left;
+	height: 400px;
+	/* border: 1px solid red; */
+}
+#content .secondNav{
+	/* float: left; */
+}
+#content .secondNav div:first-of-type{
+	width: 100%;
+	background-color: brown;
+	height: 400px;
+	overflow: hidden;
+}
+#content .secondNav img {
+	height: 400px;
+	margin-left: -240px;
+}
+
+
+
+
+

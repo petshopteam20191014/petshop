@@ -1,0 +1,66 @@
+/*	blockquote:块引用
+	<pre> 标签可定义预格式化的文本
+	fieldset:表单域
+	legend；表单标题
+*/
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{
+	margin: 0;
+	padding: 0;
+}
+/* 字体：字体大小/字体行高 字体格式 
+	\5b8b\4f53:宋体
+*/
+body,button,input,select,textarea{
+	font: 12px/1.5 tahoma,arial,\5b8b\4f53;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-size: 100%;
+}
+/* <address> 标签总是定义文档的作者/所有者的联系信息 */
+address,cite,dfn,em,var{
+	font-style: normal;
+}
+code,kbd,pre,samp{
+	font-family: "courier new",courier,monospace;
+}
+small{
+	font-size: 12px;
+}
+ui,ol,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+sup{
+	vertical-align: text-top;
+}
+sub{
+	vertical-align: text-bottom;
+}
+legend{
+	color: #000;
+}
+fieldset,img{
+	border: 0;
+}
+button,input,select,textarea{
+	font-size: 100%;
+}
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.clear{
+	clear: both;
+	float: none;
+	height: 0;
+	overflow: hidden;
+}
+html .hide{
+	display: none;
+}

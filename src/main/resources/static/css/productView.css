@@ -1,0 +1,212 @@
+#header .mainNav01{
+	display: none;
+}
+#content{
+	float: left;
+	width: 100%;
+}
+div[id=content]>div:first-of-type{
+	width: 80%;
+	float: left;
+	margin-left: 84px;
+	/* border: 1px solid black; */
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #666666;
+}
+div[id=content]>div:nth-of-type(2){
+	float: left;
+	width: 1400px;
+	height: 450px;
+	overflow: hidden;
+}
+div[id=content]>div:nth-of-type(2)>div:first-of-type{
+	float: left;
+	width: 502px;
+	/* border: 1px solid #c9c9c9; */
+	height: 430px;
+	margin-left: 86px;
+}
+div[id=content]>div:nth-of-type(2)>div:last-of-type{
+	float: left;
+	/* border: 1px solid #c9c9c9; */
+	height: 430px;
+	width: 680px;
+	margin-left: 46px;
+}
+/* 左侧图片 */
+.leftView01{
+	float: left;
+	height:392px;
+	width: 90px;
+}
+.leftView01 div:first-of-type{
+	float: left;
+	border: 1px solid #c9c9c9;
+	height: 17px;
+	width: 88px;
+	background: url(../img/detail_ico2.png) no-repeat 35px 6px;
+	margin-bottom: 4px;
+}
+.leftView01 div:nth-of-type(2){
+	float: left;
+}
+.leftView01 div:nth-of-type(2) img{
+	width:88px;
+	height: 83px;
+	border: 1px solid #c9c9c9;
+}
+.leftView01 div:last-of-type{
+	background-color: #A52A2A;
+	float: left;
+	border: 1px solid #c9c9c9;
+	height: 17px;
+	width: 88px;
+	background: url(../img/detail_ico2.png) no-repeat 35px -20px;
+	margin-top: 0px;
+}
+div[id=content]>div:nth-of-type(2)>div:first-of-type>div:nth-of-type(2){
+	float: left;
+	margin-left: 12px;
+}
+div[id=content]>div:nth-of-type(2)>div:first-of-type>div:nth-of-type(2) img{
+	width:396px;
+	border: 1px solid #c9c9c9;
+}
+.leftView>div:nth-of-type(3){
+	float: right;
+	margin-top: 20px;
+	font-size: 15px;
+	color: coral;
+	
+}
+.leftView>div:nth-of-type(3) li{
+	float: right;
+	width: 17px;
+	height: 17px;
+	margin-left: 6px;
+	margin-top: -8px;
+	position: relative;
+}
+.leftView>div:nth-of-type(3) li:first-of-type{
+	float: right;
+	background:none;
+	width: 40px;
+	height: 17px;
+	margin-left: 24px;
+	top: -3px;
+}
+.leftView>div:nth-of-type(3) li:nth-of-type(2){
+	background: url(../img/icons_0_16.png) no-repeat 0 -52px;
+}
+.leftView>div:nth-of-type(3) li:nth-of-type(3){
+	background: url(../img/icons_0_16.png) no-repeat 0 -104px;
+}
+.leftView>div:nth-of-type(3) li:nth-of-type(4){
+	background: url(../img/icons_0_16.png) no-repeat 0 -156px;
+}
+.leftView>div:nth-of-type(3) li:nth-of-type(5){
+	background: url(../img/icons_0_16.png) no-repeat 0 -208px;
+}
+.leftView>div:nth-of-type(3) li:nth-of-type(6){
+	background: url(../img/icons_0_16.png) no-repeat 0 -260px;
+}
+.leftView>div:nth-of-type(3) li:nth-of-type(7){
+	background: url(../img/icons_0_16.png) no-repeat 0 -312px;
+}
+div[class=rightView]>ul>li:first-of-type{
+	font-size: 20px;
+	color: black;
+	font-weight: bold;
+	padding-bottom: 40px;
+	border-bottom: 1px solid #E0E0E0;
+}
+div[class=rightView]>ul>li:nth-of-type(2){
+	color: coral;
+	font-size: 18px;
+	font-weight: bold;
+	padding-top: 18px;
+	padding-bottom: 25px;
+	border-bottom: 1px solid #E0E0E0;
+}
+div[class=rightView]>ul>li:nth-of-type(3){
+	padding-top: 34px;
+	height: 30px;
+}
+div[class=rightView]>ul>li:nth-of-type(3) span{
+	float: left;
+}
+div[class=rightView]>ul>li:nth-of-type(3) span{
+	width: 55px;
+	display: block;
+	height: 27px;
+	text-align: center;
+	line-height: 27px;
+	position: relative;
+	top: -6px;
+	margin-left: 10px;
+}
+div[class=rightView]>ul>li:nth-of-type(3) span:nth-of-type(1){
+	border: 0;
+	margin-left: -10px;
+}
+div[class=rightView]>ul>li:nth-of-type(3) span:nth-of-type(2){
+	border: 1.5px solid green;
+
+}
+div[class=rightView]>ul>li:nth-of-type(3) span:nth-of-type(3){
+	border: 1px solid #E0E0E0;
+}
+div[class=rightView]>ul>li:nth-of-type(4){
+	padding-top: 28px;
+	height: 30px;
+}
+
+div[class=rightView]>ul>li:nth-of-type(4) span{
+	float: left;
+}
+div[class=rightView]>ul>li:nth-of-type(4) span{
+	width: 34px;
+	display: block;
+	border: 1.5px solid green;
+	height: 27px;
+	text-align: center;
+	line-height: 27px;
+	position: relative;
+	top: -6px;
+	margin-left: 10px;
+}
+div[class=rightView]>ul>li:nth-of-type(4) span:nth-of-type(1){
+	border: 0;
+	margin-left: 0;
+	margin-right: 10px;
+}
+div[class=rightView]>ul>li:nth-of-type(4) span:nth-of-type(2){
+	border: 1.5px solid green;
+
+}
+div[class=rightView]>ul>li:nth-of-type(4) span:nth-of-type(3){
+	border: 1px solid #E0E0E0;
+}
+
+div[class=rightView]>ul>li:nth-of-type(5){
+	padding-top: 24px;
+}
+div[class=rightView]>ul>li:nth-of-type(5) input{
+	height: 45px;
+	width: 52px;
+	position: relative;
+	top: -3px;
+}
+div[class=rightView]>ul>li:nth-of-type(5) button{
+	height: 52px;
+	width: 190px;
+	font-size: 20px;
+	background-color: coral;
+	color: white;
+	margin-left: 8px;
+}
+div[class=rightView]>ul>li:nth-of-type(6){
+	padding-top: 24px;
+	color: green;
+}
