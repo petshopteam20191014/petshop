@@ -12,4 +12,8 @@ public interface TasteMapper {
 	//所有的商品口味
 	@Select("select * from taste")
 	public List<Taste> selectAllTaste();
+	
+	//根据id查询
+	@Select("select * from taste where tid=#{tid}")
+	public Taste selectById(int tid);
 }

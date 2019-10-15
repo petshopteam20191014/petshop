@@ -12,5 +12,8 @@ public interface CweightMapper {
 	//所有的重量
 	@Select("select * from cweight")
 	public List<Cweight> selectAllCweight();
-
+	
+	//根据id查询
+	@Select("select * from cweight where cwid=#{cwid}")
+	public Cweight selectById(int cwid);
 }

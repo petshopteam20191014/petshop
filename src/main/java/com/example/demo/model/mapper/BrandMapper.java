@@ -12,4 +12,8 @@ public interface BrandMapper {
 	//获取所有的品牌
 	@Select("select * from brand")
 	public List<Brand> selectAllBrand();
+	
+	//根据id查询品牌
+	@Select("select * from brand where bid = #{bid}")
+	public Brand selectById(String bid);
 }

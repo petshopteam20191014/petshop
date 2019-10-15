@@ -12,4 +12,8 @@ public interface SizeMapper {
 	//所有的尺寸
 	@Select("select * from size")
 	public List<Size> selectAllSize();
+	
+	//根据id查询
+	@Select("select * from size where sid=#{sid}")
+	public Size selectById(int sid);
 }

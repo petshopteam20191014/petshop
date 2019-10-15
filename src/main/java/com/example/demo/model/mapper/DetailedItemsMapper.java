@@ -13,4 +13,6 @@ public interface DetailedItemsMapper {
 	//查找某个商品类别下的所有详细类别
 	@Select("select * from detaileditems where pid = #{pid} and iid = #{iid}")
 	public List<Detaileditems> selectItemAllDetailedItems(@Param("pid") int pid,@Param("iid") int iid);
+	
+	
 }
