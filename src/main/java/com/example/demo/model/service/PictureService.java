@@ -12,5 +12,5 @@ public class PictureService {
 	
 	public void insertPicture(String productId,String picture) {
 		pictureMapper.insertPicture(productId, picture);
-	};
+	}
 }

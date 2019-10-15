@@ -11,14 +11,19 @@ public class UserService {
     @Autowired
 	private UserMapper userMapper;
    
-    public User selectUser(String uname) {
-		return userMapper.selectUser(uname);
+    public User selectUserByName(String uname) {
+		return userMapper.selectUserByName(uname);
 		
 	} 
     
     public void insertUser(String uname,String password){
     	userMapper.insertUser(uname, password);
     }
+
+	public User selectUser(String uname,String password) {
+		return userMapper.selectUser(uname,password);
+		
+	}
 
 	
 	
