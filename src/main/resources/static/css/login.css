@@ -16,7 +16,7 @@ div[id=content]>div:first-of-type{
 div[id=content]>div:nth-of-type(2){
 	float: left;
 	height: 590px;
-	width: 460px;
+	width: 480px;
 	border: 1px solid #DDDDDD;
 	margin-left: 84px;
 }
@@ -58,11 +58,11 @@ div[id=content]>div:nth-of-type(2) div:first-of-type li:nth-of-type(2) p{
 	border-right:0 ;
 }
 div[id=content]>div:nth-of-type(2) div:first-of-type li:nth-of-type(2) input{
-	width: 300px;
+	width: 280px;
 	height: 35px;
 }
 div[id=content]>div:nth-of-type(2) div:first-of-type li:nth-of-type(3) input{
-	width: 300px;
+	width: 280px;
 	height: 35px;
 }
 div[id=content]>div:nth-of-type(2) div:first-of-type li:nth-of-type(3){

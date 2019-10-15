@@ -3,10 +3,8 @@ package com.example.demo.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.model.bean.User;
@@ -18,9 +16,9 @@ public class UserController {
 	private UserService userService;
     
     //注册时，用户名重复判断
-    @RequestMapping("selectUser")
-	public String selectUser(@RequestParam("uname") String uname){
-    	User u=userService.selectUser(uname);
+    @RequestMapping("selectUserByName")
+	public String selectUserByName(@RequestParam("uname") String uname){
+    	User u=userService.selectUserByName(uname);
     	if(u!=null){
     		return "{\"result\":\"exist\"}";
     	}else{
@@ -30,11 +28,24 @@ public class UserController {
 	    
 		
     //注册
-	@RequestMapping("insertUser")
-	public void insertUser(@RequestParam("uname") String uname,@RequestParam("password") String password){
+	@RequestMapping("register")
+	public String register(@RequestParam("uname") String uname,@RequestParam("password") String password){
 		
 		userService.insertUser(uname, password);
+		return "{\"result\":\"注册成功\"}";
 	}
+	
+	//登录
+	@RequestMapping("loginUser")
+	public String login(@RequestParam("uname") String uname,@RequestParam("password") String password){
+		User u=userService.selectUser(uname,password);
+		if(u!=null){
+    		return "{\"result\":\"登录成功\"}";
+    	}else{
+    		return "{\"result\":\"用户名或密码不正确，请重新输入！\"}";
+    	}
+	}
+	
 	
 	
 }

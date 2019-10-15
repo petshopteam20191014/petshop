@@ -11,9 +11,12 @@ import com.example.demo.model.bean.User;
 public interface UserMapper {
 	
 	@Select("select * from user where uname=#{uname}")
-	public User selectUser(String uname);
+	public User selectUserByName(String uname);
 
 	@Insert("insert into user(uname,password) values(#{uname},#{password})")
 	public void insertUser(@Param("uname") String uname,@Param("password") String password);
+
+	@Select("select * from user where uname=#{uname} and password=#{password}")
+	public User selectUser(@Param("uname")String uname, @Param("password") String password);
 	
 }
