@@ -16,6 +16,7 @@ $(function(){
 				window.location.href="home_page.html";
 			}
 			
+			
 		})
 	});
 	
