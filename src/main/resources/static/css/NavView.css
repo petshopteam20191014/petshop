@@ -3,7 +3,7 @@
 }
 #content{
 	float: left;
-	width: 100%;
+	width: 1400px;
 }
 #content div:first-of-type{
 	margin-left: 84px;
@@ -57,7 +57,7 @@
 	color: black;
 	padding-left: 20px;
 }
-/* 热销榜 */
+/* 鐑攢姒� */
 #content div[class=leftNav]>ul>li:last-of-type{
 	width: 189px;
 	height: auto;
@@ -95,15 +95,26 @@
 	text-align: center;
 	font-size: 13px;
 }
+.rexiao01 li:nth-of-type(2){
+	width:140px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
 
 
-
-#content .backImg{
-	background: url(../img/1556876389661827261.jpg);
+#content .backImg,#content .backImg div{
 	float: left;
 	width: 950px;
 	height: 300px;
 	margin-left: 22px;
+}
+#content .backImg div:nth-of-type(1){
+	background: url(../img/1556876389661827261.jpg);
+}
+#content .backImg div:nth-of-type(2){
+	background: url(../img/1556876560998441089.jpg);
+	display:none;
 }
 #content .productView{
 	float: left;
@@ -157,8 +168,14 @@
 	margin-left: 18px;
 }
 #content .productView div:nth-of-type(3)>ul>li li:nth-of-type(2){
+	width:150px;
 	font-size: 13px;
 	font-weight: bold;
+	overflow: hidden;
+	height:18px;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	
 }
 #content .productView div:nth-of-type(3)>ul>li li:nth-of-type(3){
 	margin-top:2px;
@@ -206,3 +223,5 @@
 	background-color: #666666;
 	margin-right: 50px;
 }
+
+

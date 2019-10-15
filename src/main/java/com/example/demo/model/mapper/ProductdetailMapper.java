@@ -1,9 +1,19 @@
 package com.example.demo.model.mapper;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.One;
+import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.ResultMap;
+import org.apache.ibatis.annotations.ResultType;
+import org.apache.ibatis.annotations.Results;
+import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.mapping.FetchType;
 
 import com.example.demo.model.bean.Productdetail;
+import com.example.demo.model.bean.Productdetail2;
 
 @Mapper
 public interface ProductdetailMapper {
@@ -11,4 +21,25 @@ public interface ProductdetailMapper {
 	@Insert("insert into productdetail values(#{pdid},#{diid},#{pdname},#{cost},#{brand},#{color},"
 	+"#{cweight},#{specification},#{taste},#{size},#{stocks},#{shlelftime})")
 	public void insertProductdetail(Productdetail productdetail);
+	
+
+	//查询所有商品
+	@Select("select pdid,diid,pdname,cost,brand from productdetail GROUP BY pdname")
+	@Results(id="productResult",value= {
+			@Result(id=true,column = "pdid",property = "pdid" ),
+			@Result(column = "diid",property = "diid"),
+			@Result(column = "pdname",property = "pdname"),
+			@Result(column = "cost",property = "cost"),
+			@Result(column = "brand",property = "brand",one = @One(select = "com.example.demo.model.mapper.BrandMapper.selectById",fetchType= FetchType.EAGER)),
+			@Result(column = "color",property = "color",one = @One(select = "com.example.demo.model.mapper.ColorMapper.selectById",fetchType= FetchType.EAGER)),
+			@Result(column = "cweight",property = "cweight",one = @One(select = "com.example.demo.model.mapper.CweightMapper.selectById",fetchType= FetchType.EAGER)),
+			@Result(column = "specification",property = "specification",one = @One(select = "com.example.demo.model.mapper.SpecificationMapper.selectById",fetchType= FetchType.EAGER)),
+			@Result(column = "taste",property = "taste",one = @One(select = "com.example.demo.model.mapper.TasteMapper.selectById",fetchType= FetchType.EAGER)),
+			@Result(column = "size",property = "size",one = @One(select = "com.example.demo.model.mapper.SizeMapper.selectById",fetchType= FetchType.EAGER)),
+			@Result(column = "stocks",property = "stocks"),
+			@Result(column = "shlelftime",property = "shlelftime")
+	})
+	public List<Productdetail2> selectAllProduct();
+	
+	
 }

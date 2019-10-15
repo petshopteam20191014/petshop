@@ -1,13 +1,13 @@
 package com.example.demo.model.bean;
 
 public class Picture {
-	private String pictureid;
+	private String pictureId;
 	private String pictureName;
 	public String getPictureid() {
-		return pictureid;
+		return pictureId;
 	}
-	public void setPictureid(String pictureid) {
-		this.pictureid = pictureid;
+	public void setPictureid(String pictureId) {
+		this.pictureId = pictureId;
 	}
 	public String getPictureName() {
 		return pictureName;

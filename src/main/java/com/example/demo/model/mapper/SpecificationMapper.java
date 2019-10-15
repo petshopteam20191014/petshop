@@ -12,4 +12,8 @@ public interface SpecificationMapper {
 	//所有的规格
 	@Select("select * from specification")
 	public List<Specification> selectAllSpecification();
+	
+	//根据id查询
+	@Select("select * from specification where sfid=#{sfid}")
+	public Specification selectById(int sfid);
 }

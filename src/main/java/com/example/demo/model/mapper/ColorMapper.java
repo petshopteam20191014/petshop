@@ -12,4 +12,7 @@ public interface ColorMapper {
 	
 	@Select("select * from color")
 	public List<Color> selectAllColor(); 
+	
+	@Select("select * from color where cid=#{cid}")
+	public Color selectById(int cid);
 }
