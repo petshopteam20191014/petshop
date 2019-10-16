@@ -3,9 +3,10 @@
 }
 #content{
 	float: left;
-	width: 1400px;
+	width: 1300px;
 }
 #content div:first-of-type{
+	width:600px;
 	margin-left: 84px;
 	/* border: 1px solid black; */
 	margin-top: 10px;
