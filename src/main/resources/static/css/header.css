@@ -206,8 +206,6 @@
 	line-height: 42.5px;
 	padding-left: 32px;
 	border: 1px solid ghostwhite;
-	/* color: gray; */
-	/* font-weight: bold; */
 }
 /*
 #header .mainNav01 li:hover{
@@ -275,3 +273,17 @@
 	margin-top: 10px;
 	
 }
+
+.mainNavCss{
+	border-color:chocolate !important;
+	/*background:black;*/
+	border-right:2px solid ghostwhite !important;
+	border-left: 2px solid coral !important;
+}
+.mainNavCss a {
+	font-size:14px;
+	color: coral !important;
+}
+
+
+
