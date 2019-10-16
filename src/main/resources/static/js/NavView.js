@@ -1,15 +1,5 @@
 $(function(){
-	//当鼠标触碰所有商品分类的时候，详细分类出现，移开是，消失
-	$(".mainNav li:eq(0)").hover(function(){
-		$(".mainNav01").show();
-	},function(){
-		$(".mainNav01").hide();
-	})
-	$(".mainNav01").hover(function(){
-		$(this).show();
-	},function(){
-		$(this).hide();
-	})
+	
 	
 	//点击左侧导航栏分类，展示详细分类
 	for (var x = 0; x < 19 ;x ++){
