@@ -240,3 +240,37 @@
 #header .mainNav02:hover{
 	display: block;
 }
+
+
+.mainNav03{
+	display: none;
+	font-size: 13px;
+}
+.mainNav03>div{
+	/* height: 60px; */
+	background-color: #808080;
+	width: 640px;
+}
+.mainNav03>div>div{
+	float: left;
+}
+.mainNav03>div>div:nth-of-type(1){
+	padding-top: 10px;
+	color: coral;
+	width: 60px;
+	background-color: #D2691E;
+	/* height: 50px; */
+	margin-left: 40px;
+}
+.mainNav03>div>div:nth-of-type(2){
+	width: 500px;
+	background-color: #D2691E;
+	/* height: 60px; */
+	margin-left: 30px;
+}
+.mainNav03>div>div:nth-of-type(2) li{
+	float: left;
+	margin-left: 20px;
+	margin-top: 10px;
+	
+}
