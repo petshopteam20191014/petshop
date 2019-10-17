@@ -1,0 +1,164 @@
+#content{
+	width: 1350px;
+	float: left;	
+	/* background-color: #008000; */
+}
+
+#content>div:first-of-type{
+	height: 60px;
+	width: 100%;
+	float: left;
+	/* border: 0.0625rem solid red; */
+	height:145px ;
+}
+#content>div:first-of-type>div{
+	float: left;
+}
+#content>div:first-of-type>div:first-of-type img{
+	height: 100px;
+	margin-left: 190px;
+	margin-top: 20px;
+}
+#content>div:first-of-type>div:last-of-type img{
+	margin-left: 190px;
+	margin-top: 48px;
+}
+
+#content>div:nth-of-type(2){
+	width: 1000px;
+	float: left;
+	padding-left: 200px;
+	/* border: 0.0625rem solid red; */
+}
+#content>div:nth-of-type(2)>span{
+	font-size: 18px;
+}
+#content>div{
+	float: left;
+}
+.shopCar th{
+	border: 1px solid #E0E0E0;
+	border-right: 0;
+	border-left: 0;
+	background: #FAFBF8;
+	height: 43px;
+}
+.shopCar th:first-of-type,.shopCar td:first-of-type{
+	width: 75px;
+	text-align: center;
+}
+.shopCar th:nth-of-type(2),.shopCar td:nth-of-type(2){
+	width: 100px;
+	text-align: left;
+}
+.shopCar th:nth-of-type(3),.shopCar td:nth-of-type(3){
+	width: 275px;
+	text-align: left;
+}
+.shopCar th:nth-of-type(4),.shopCar td:nth-of-type(4){
+	width: 140px;
+	text-align: center;
+}
+.shopCar td:nth-of-type(4){
+	font-size: 20px;
+}
+.shopCar th:nth-of-type(5),.shopCar td:nth-of-type(5){
+	width: 140px;
+	text-align: center;
+}
+.shopCar td:nth-of-type(5) input{
+	margin-left: 4px;
+	margin-right: 4px;
+	width: 30px;
+	height: 16px;
+	text-align: center;
+	position: relative;
+	top: -2px;
+}
+.shopCar th:nth-of-type(6),.shopCar td:nth-of-type(6){
+	width: 120px;
+	text-align: center;
+}
+.shopCar td:nth-of-type(6){
+	font-size: 20px;
+	color: coral;
+}
+.shopCar th:nth-of-type(7),.shopCar td:nth-of-type(7){
+	width: 160px;
+	text-align: left;
+	padding-left:40px ;
+}
+.shopCar td{
+	height: 100px;
+	line-height: 100px;
+	border-bottom: 1px solid #E0E0E0;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+.checkCar{
+	position: relative;
+	top: 2px;
+}
+.shopCar td:nth-of-type(2)>div{
+	background: url(../img/478_G_1554886337170.jpg);
+	background-size:cover ;
+	width: 80px;
+	height: 80px;
+}
+.shopCar td:nth-of-type(7) a{
+	width: 40px;
+	line-height: 17px;
+	height: 17px;
+	float: left;
+	margin-right: 100px;
+	font-size: 13px;
+	/* border: 1px solid red; */
+}
+
+.shopCar01{
+	margin-top: 20px;
+	width: 100%;
+}
+.shopCar01 p{
+	float: left;
+}
+.shopCar01 p:nth-of-type(1){
+	padding-left: 28px;
+}
+.shopCar01 p:nth-of-type(2){
+	padding-left: 28px;
+	font-weight: bold;
+}
+.shopCar01 p:nth-of-type(3){
+	padding-left: 28px;
+}
+.shopCar01 p:nth-of-type(4){
+	float: right;
+	font-size: 15px;
+}
+.shopCar02{
+	width: 100%;
+	float: left;
+}
+.shopCar02 p{
+	float: right;
+	font-size:17px ;
+}
+.shopCar02 span{
+	color: coral;
+	font-size: 22px;
+}
+.shopCar03{
+	float: right;
+	font-size: 23px;
+}
+.shopCar03 button{
+	width: 140px;
+	margin-left: 30px;
+	background-color: #F0990C;
+	color: white;
+	border-radius:6px ;
+}
+.shopCar03 a{
+	color: coral;
+}
