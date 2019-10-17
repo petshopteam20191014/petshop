@@ -1,5 +1,8 @@
 $(function(){
-	
+	//获取url地址的参数
+	var url= window.location.href;
+	var index = url.substring(url.lastIndexOf('?') + 1);
+//	console.log(index);
 	
 	//点击左侧导航栏分类，展示详细分类
 	for (var x = 0; x < 19 ;x ++){
@@ -14,23 +17,58 @@ $(function(){
 		x ++ ;
 	}
 	
+	//获取页面跳转的是那种分类，然后加载对应的图片
+	
+	var picId = index.substring(1,2);
+	console.log(picId);
+	if (picId==2){
+		$("#content .backImg div:eq(0)").css("background-image","url(img/1554373195017694390.jpg)")
+		.next().css("background-image","url(img/1554373248885044037.jpg)");
+	}
+	if (picId==3){
+		$("#content .backImg div:eq(0)").css("background-image","url(img/1554372344206463971.jpg)")
+		.next().css("background-image","url(img/1554372375678296926.jpg)");
+	}
+	if (picId==4){
+		$("#content .backImg div:eq(0)").css("background-image","url(img/1554885963230503966.jpg)")
+		.next().css("background-image","url(img/1554886003995979614.jpg)");
+	}
+	if (picId==5){
+		$("#content .backImg div:eq(0)").css("background-image","url(img/1554881395528235136.jpg)")
+		.next().css("background-image","url(img/1554881446495228344.jpg)");
+	}
+	if (picId==6){
+		$("#content .backImg div:eq(0)").css("background-image","url(img/1554373409730452364.jpg)")
+		.next().css("background-image","url(img/1554373462522590467.jpg)");
+	}
+	if (picId==7){
+		$("#content .backImg div:eq(0)").css("background-image","url(img/1554953866464499118.jpg)")
+		.next().css("background-image","url(img/1555653767092865223.jpg)");
+	}
+	if (picId==8){
+		$("#content .backImg div:eq(0)").css("background-image","url(img/1554953710764695632.jpg)")
+		.next().css("background-image","url(img/1554953626322657299.jpg)");
+	}
+	if (picId==9){
+		$("#content .backImg div:eq(0)").css("background-image","url(img/1554969804598231111.jpg)")
+		.next().css("background-image","url(img/1554969749280286685.jpg)");
+	}
+	
 	//图片自动切换；
 	function pictureAuto(){
-		var $x = $(".backImg>div:eq(0)");
-		if($x.is(":visible")){
-			$x.hide();
-			$x.next().show();
+		var $pic = $(".backImg>div:eq(0)");
+		if($pic.is(":visible")){
+			$pic.hide();
+			$pic.next().show();
 		}else {
-			$x.show();
-			$x.next().hide();
+			$pic.show();
+			$pic.next().hide();
 		}
 	}
-	setInterval(pictureAuto,1000);
+	setInterval(pictureAuto,2000);
 	
 	
-	var url= window.location.href;
-	var index = url.substring(url.lastIndexOf('?') + 1);
-//	console.log(index);
+
 	$.ajax({
 		type:"post",
 		url:"selectPartProduct",
