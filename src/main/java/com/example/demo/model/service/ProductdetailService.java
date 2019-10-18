@@ -36,4 +36,30 @@ public class ProductdetailService {
 		}
 		return list;
 	};
+	
+	public List<Productdetail2> selectProductByPdid(String pdid){
+		List<Productdetail2> list = productdetailMapper.selectProductByPdid(pdid);
+		//给每个商品匹配对应的图片
+		for (Productdetail2 x : list) {
+			String id = x.getPdid().substring(0,5);
+			x.setPicture(pictureMapper.selectById(id));
+		}
+		return list;
+	};
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

@@ -23,7 +23,7 @@ public interface ProductdetailMapper {
 	public void insertProductdetail(Productdetail productdetail);
 	
 
-	//查询所有商品
+	//查询所有商品以名字分组
 	@Select("select pdid,diid,pdname,cost,brand from productdetail GROUP BY pdname")
 	@Results(id="productResult",value= {
 			@Result(id=true,column = "pdid",property = "pdid" ),
@@ -40,6 +40,22 @@ public interface ProductdetailMapper {
 			@Result(column = "shlelftime",property = "shlelftime")
 	})
 	public List<Productdetail2> selectAllProduct();
+	
+	//根据pdid的前5位查询 商品所有信息
+	@Select("select * from productdetail where pdid like '${pdid}%'")
+	@ResultMap("productResult")
+	public List<Productdetail2> selectProductByPdid(String pdid);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }

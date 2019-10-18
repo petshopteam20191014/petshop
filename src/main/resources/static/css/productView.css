@@ -51,6 +51,12 @@ div[id=content]>div:nth-of-type(2)>div:last-of-type{
 .leftView01 div:nth-of-type(2){
 	float: left;
 }
+.leftView01 div:nth-of-type(2) li{
+	width:88px;
+	height: 83px;
+	border: 1px solid #white;
+	margin-bottom: 8px;
+}
 .leftView01 div:nth-of-type(2) img{
 	width:88px;
 	height: 83px;

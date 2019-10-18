@@ -62,5 +62,10 @@ public class ProductdetailController {
 		
 	}
 	
+	@RequestMapping("selectProductByPdid")
+	public List<Productdetail2> selectProductByPdid(String pdid){
+		return productdetailService.selectProductByPdid(pdid);
+	}
+	
 	
 }
