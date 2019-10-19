@@ -7,7 +7,6 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.One;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.ResultMap;
-import org.apache.ibatis.annotations.ResultType;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.mapping.FetchType;
@@ -46,6 +45,35 @@ public interface ProductdetailMapper {
 	@ResultMap("productResult")
 	public List<Productdetail2> selectProductByPdid(String pdid);
 	
+	//查询某个pdid商品下的所有颜色
+	@Select("select DISTINCT color from productdetail where pdid like '${pdid}%'")
+	@ResultMap("productResult")
+	public List<Productdetail2> selectPicColor(String pdid);
+	
+	//查询某个pdid商品下的所有尺寸
+	@Select("select DISTINCT size from productdetail where pdid like '${pdid}%'")
+	@ResultMap("productResult")
+	public List<Productdetail2> selectPicSize(String pdid);
+	
+	//查询某个pdid商品下的所有规格
+	@Select("select DISTINCT specification from productdetail where pdid like '${pdid}%'")
+	@ResultMap("productResult")
+	public List<Productdetail2> selectPicSF(String pdid);
+	
+	//查询某个pdid商品下的所有口味
+	@Select("select DISTINCT taste from productdetail where pdid like '${pdid}%'")
+	@ResultMap("productResult")
+	public List<Productdetail2> selectPicTaste(String pdid);
+	
+	
+	//查询某个商品的全部库存数量
+	@Select("select sum(stocks) from productdetail where pdid like '${pdid}%'")
+	public int selectPicStocks(String pdid);
+	
+	
+	//根据ID查询单个商品
+	@Select("select stocks from productdetail where pdid like #{pdid}")
+	public Productdetail2 selectOnePicStocks(String pdid);
 	
 	
 	

@@ -67,5 +67,51 @@ public class ProductdetailController {
 		return productdetailService.selectProductByPdid(pdid);
 	}
 	
+	@RequestMapping("selectPicColor")
+	public List<Productdetail2> selectPicColor(String pdid){
+		return productdetailService.selectPicColor(pdid);
+	}
+	
+	@RequestMapping("selectPicSize")
+	public List<Productdetail2> selectPicSize(String pdid){
+		return productdetailService.selectPicSize(pdid);
+	}
+	
+	@RequestMapping("selectPicSF")
+	public List<Productdetail2> selectPicSF(String pdid){
+		return productdetailService.selectPicSF(pdid);
+	}
+	
+	@RequestMapping("selectPicTaste")
+	public List<Productdetail2> selectPicTaste(String pdid){
+		return productdetailService.selectPicTaste(pdid);
+	}
+	
+	//查询某个商品的全部库存数量
+	@RequestMapping("selectPicStocks")
+	public int selectPicStocks(String pdid) {
+		return productdetailService.selectPicStocks(pdid);
+	}
+	
+	//根据ID查询单个商品
+	@RequestMapping("selectOnePicStocks")
+	public Productdetail2 selectOnePicStocks(String pdid) {
+		return productdetailService.selectOnePicStocks(pdid);
+	};
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }

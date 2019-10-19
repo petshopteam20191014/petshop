@@ -47,8 +47,30 @@ public class ProductdetailService {
 		return list;
 	};
 	
+	public List<Productdetail2> selectPicColor(String pdid){
+		return productdetailMapper.selectPicColor(pdid);
+	}
 	
+	public List<Productdetail2> selectPicSize(String pdid){
+		return productdetailMapper.selectPicSize(pdid);
+	}
 	
+	public List<Productdetail2> selectPicSF(String pdid){
+		return productdetailMapper.selectPicSF(pdid);
+	}
+	
+	public List<Productdetail2> selectPicTaste(String pdid){
+		return productdetailMapper.selectPicTaste(pdid);
+	}
+	
+	public int selectPicStocks(String pdid) {
+		return productdetailMapper.selectPicStocks(pdid);
+	};
+	
+	//根据ID查询单个商品
+	public Productdetail2 selectOnePicStocks(String pdid) {
+		return productdetailMapper.selectOnePicStocks(pdid);
+	};
 	
 	
 	
