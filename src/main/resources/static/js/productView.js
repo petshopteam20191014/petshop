@@ -143,8 +143,10 @@ $(function(){
 			data:{"pdid":pdid},
 			dataType:"json",
 			success:function(data){
-//						console.log(data);	
-				$(".rightView>ul:eq(1)>li:eq(2)").text("该型号库存:"+data.stocks);
+//				console.log(data.stocks);	
+				$(".rightView>ul:eq(1)>li:eq(2)").html("<p>该型号库存:</p><p>"+data.stocks+"</p>");
+				$(".rightView>ul:eq(1)>li:eq(2)").find("p").css({"float":"left","margin-left":"0px","padding-left":"0px"});
+//				$(".rightView>ul:eq(1)>li:eq(2)").find("div").css("width","115px");
 				//对数量上下线进行控制
 				$(".rightView>ul:eq(1)>li:eq(0) input").attr({"min":"1","max":data.stocks});
 			}
@@ -286,13 +288,32 @@ $(function(){
 		dataType:"json",
 		success:function(data){
 //			console.log(data);	
-			$(".rightView>ul:eq(1)>li:eq(1)").text("全部库存:"+data);
+			$(".rightView>ul:eq(1)>li:eq(1)").html("<span>全部库存:</span><span>"+data+"</span>");
 		}
 		
 	})
 	
 	//点击购物车
+	$("#pvBtn").bind("click",function(){
+		var num = $(".rightView>ul:eq(1)>li:eq(0) input").val();
+		var num1 = $(".rightView>ul:eq(1)>li:eq(2)").find("span").text();
+		if (num > num1){
+			alert("输入的商品数量超过改型号商品的库存最大值");
+		}
+	})
 	
+	
+	//当所有商品分类被点击时，，图片的z-index为﹣
+	$(".conWidth01").hover(function(){
+		$(".jqzoom").css("z-index","-1");
+		$("div[class=rightView]>ul>li li").css("z-index","-1");
+		$("div[class=rightView]>ul:eq(1)>li:eq(0)").find("input").css("z-index","-1");
+//		div[class=rightView]>ul:nth-of-type(2)>li:nth-of-type(1)
+	},function(){
+		$(".jqzoom").css("z-index","1");
+		$("div[class=rightView]>ul>li li").css("z-index","1");
+		$("div[class=rightView]>ul:eq(1)>li:eq(0)").find("input").css("z-index","1");
+	})
 	
 	
 

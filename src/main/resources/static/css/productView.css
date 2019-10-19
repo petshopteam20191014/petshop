@@ -79,14 +79,14 @@ div[id=content]>div:nth-of-type(2)>div:first-of-type>div:nth-of-type(2) img{
 	width:396px;
 	border: 1px solid #c9c9c9;
 }
-.leftView>div:nth-of-type(3){
+.leftView>div:last-of-type{
 	float: right;
 	margin-top: 20px;
 	font-size: 15px;
 	color: coral;
 	
 }
-.leftView>div:nth-of-type(3) li{
+.leftView>div:last-of-type li{
 	float: right;
 	width: 17px;
 	height: 17px;
@@ -94,7 +94,7 @@ div[id=content]>div:nth-of-type(2)>div:first-of-type>div:nth-of-type(2) img{
 	margin-top: -8px;
 	position: relative;
 }
-.leftView>div:nth-of-type(3) li:first-of-type{
+.leftView>div:last-of-type li:first-of-type{
 	float: right;
 	background:none;
 	width: 40px;
@@ -102,22 +102,22 @@ div[id=content]>div:nth-of-type(2)>div:first-of-type>div:nth-of-type(2) img{
 	margin-left: 24px;
 	top: -3px;
 }
-.leftView>div:nth-of-type(3) li:nth-of-type(2){
+.leftView>div:last-of-type li:nth-of-type(2){
 	background: url(../img/icons_0_16.png) no-repeat 0 -52px;
 }
-.leftView>div:nth-of-type(3) li:nth-of-type(3){
+.leftView>div:last-of-type li:nth-of-type(3){
 	background: url(../img/icons_0_16.png) no-repeat 0 -104px;
 }
-.leftView>div:nth-of-type(3) li:nth-of-type(4){
+.leftView>div:last-of-type li:nth-of-type(4){
 	background: url(../img/icons_0_16.png) no-repeat 0 -156px;
 }
-.leftView>div:nth-of-type(3) li:nth-of-type(5){
+.leftView>div:last-of-type li:nth-of-type(5){
 	background: url(../img/icons_0_16.png) no-repeat 0 -208px;
 }
-.leftView>div:nth-of-type(3) li:nth-of-type(6){
+.leftView>div:last-of-type li:nth-of-type(6){
 	background: url(../img/icons_0_16.png) no-repeat 0 -260px;
 }
-.leftView>div:nth-of-type(3) li:nth-of-type(7){
+.leftView>div:last-of-type li:nth-of-type(7){
 	background: url(../img/icons_0_16.png) no-repeat 0 -312px;
 }
 div[class=rightView]>ul:first-of-type>li:first-of-type{
@@ -237,6 +237,8 @@ div[class=rightView]>ul:nth-of-type(2)>li:nth-of-type(3){
 li{
 	cursor: pointer;
 }
+
+
 
 
 
