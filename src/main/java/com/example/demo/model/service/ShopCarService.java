@@ -30,4 +30,8 @@ public class ShopCarService {
 		}
 		return list;
 	}
+	
+	public void deleteShopCarOne(int userid,String scid){
+		shopCarMapper.deleteShopCarOne(userid, scid);
+	};
 }

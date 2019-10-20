@@ -29,5 +29,14 @@ public class ShopCarController {
 	    	return shopCarService.shopCarAllPro(userid);
 	    };
 	    
+	    //删除
+	    @RequestMapping("deleteShopCarOne")
+	    public String deleteShopCarOne(int userid,String scid){
+//	    	System.out.println(userid);
+//	    	System.out.println(scid);
+	    	shopCarService.deleteShopCarOne(userid, scid);
+	    	return "{\"result\":\"yes\"}";
+	    }
+	    
 	    
 }

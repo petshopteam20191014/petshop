@@ -2,6 +2,7 @@ package com.example.demo.model.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.One;
@@ -27,4 +28,7 @@ public interface ShopCarMapper {
     })
     public List<ShopCar> shopCarAllPro(int userid);
     
+    //根据用户id和商品pdid删除
+    @Delete("delete from shopcar where userid = #{userid} and scid = #{scid}")
+    public void deleteShopCarOne(int userid,String scid);
 }
