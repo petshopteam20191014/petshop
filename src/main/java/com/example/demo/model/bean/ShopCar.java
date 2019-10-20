@@ -1,47 +1,26 @@
 package com.example.demo.model.bean;
 
 public class ShopCar {
-
-	private int id;
-	private String pdid;
-	private int uid;
-	private int amount;
-	private double sum;
-	
-	
-	
-	public int getId() {
-		return id;
+	private User user;
+	private	Productdetail2 productdetail;
+	private int snum;
+	public User getUser() {
+		return user;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setUser(User user) {
+		this.user = user;
 	}
-	public String getPdid() {
-		return pdid;
+	public Productdetail2 getProductdetail() {
+		return productdetail;
 	}
-	public void setPdid(String pdid) {
-		this.pdid = pdid;
+	public void setProductdetail(Productdetail2 productdetail) {
+		this.productdetail = productdetail;
 	}
-	public int getUid() {
-		return uid;
+	public int getSnum() {
+		return snum;
 	}
-	public void setUid(int uid) {
-		this.uid = uid;
+	public void setSnum(int snum) {
+		this.snum = snum;
 	}
-	public int getAmount() {
-		return amount;
-	}
-	public void setAmount(int amount) {
-		this.amount = amount;
-	}
-	public double getSum() {
-		return sum;
-	}
-	public void setSum(double sum) {
-		this.sum = sum;
-	}
-	
-	
-	
 	
 }

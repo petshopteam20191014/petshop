@@ -19,4 +19,8 @@ public interface UserMapper {
 	@Select("select * from user where uname=#{uname} and password=#{password}")
 	public User selectUser(@Param("uname")String uname, @Param("password") String password);
 	
+	//根据userid查询
+	@Select("select * from user where uid = #{uid}")
+	public User selectUserById(int uid);
+	
 }

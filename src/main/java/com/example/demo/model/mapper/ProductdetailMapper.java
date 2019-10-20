@@ -75,7 +75,10 @@ public interface ProductdetailMapper {
 	@Select("select stocks from productdetail where pdid like #{pdid}")
 	public Productdetail2 selectOnePicStocks(String pdid);
 	
-	
+	//根据pdid查询 商品所有信息
+	@Select("select * from productdetail where pdid like '${pdid}%'")
+	@ResultMap("productResult")
+	public Productdetail2 selectProByPdid(String pdid);
 	
 	
 	

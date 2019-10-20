@@ -100,10 +100,17 @@
 	top: 2px;
 }
 .shopCar td:nth-of-type(2)>div{
-	background: url(../img/478_G_1554886337170.jpg);
-	background-size:cover ;
 	width: 80px;
 	height: 80px;
+}
+.shopCar td:nth-of-type(2)>div img{
+	width: 80px;
+	height: 80px;
+}
+.shopCar td:nth-of-type(3){
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
 }
 .shopCar td:nth-of-type(7) a{
 	width: 40px;
