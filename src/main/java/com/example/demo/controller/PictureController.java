@@ -27,8 +27,9 @@ public class PictureController {
 		String fName = System.currentTimeMillis()+fileName;
 //		System.out.println(fName);
 		BufferedOutputStream stream=null;
-		String filePath =System.getProperty("user.dir")+"\\src\\main\\resources\\static\\img\\product\\";
-//		System.out.println(filePath);
+//		String filePath =System.getProperty("user.dir")+"\\src\\main\\resources\\static\\img\\product\\";
+		String filePath ="Y:\\eclipseSpace\\petshop\\src\\main\\resources\\static\\img\\product\\";
+		System.out.println(filePath);
 		if(!file.isEmpty()){
 			try {
 				byte[] bytes=file.getBytes();

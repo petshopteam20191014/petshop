@@ -174,16 +174,16 @@ $(function(){
 	
 	//提交保存商品信息
 	$("#sub").bind("click",function(){
-//		console.log($("form").serialize());
-//		$.ajax({
-//			type:"post",
-//			url:"insertProductdetail",
-//			data:$("form").serialize(),
-//			datatype:"json",
-//			success:function(data){
-//				
-//			}
-//		})
+		console.log($("form").serialize());
+		$.ajax({
+			type:"post",
+			url:"insertProductdetail",
+			data:$("form").serialize(),
+			datatype:"json",
+			success:function(data){
+				
+			}
+		})
 		
 		//上传图片
 		var formData=new FormData();
