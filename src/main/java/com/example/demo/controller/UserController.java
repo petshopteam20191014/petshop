@@ -2,6 +2,8 @@ package com.example.demo.controller;
 
 
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -37,14 +39,39 @@ public class UserController {
 	
 	//登录
 	@RequestMapping("loginUser")
-	public String login(@RequestParam("uname") String uname,@RequestParam("password") String password){
+	public String login(@RequestParam("uname") String uname,@RequestParam("password") String password,HttpSession session){
 		User u=userService.selectUser(uname,password);
 		if(u!=null){
-    		return "{\"result\":\"登录成功\"}";
+//			System.out.println(u.getUid());
+			session.setAttribute("uid", u);
+    		return "{\"result\":\"0\"}";
     	}else{
     		return "{\"result\":\"用户名或密码不正确，请重新输入！\"}";
     	}
 	}
+	
+	//查看session域里面是否有值
+	@RequestMapping("sessionUser")
+	public User sessionUser(HttpSession session) {
+		if (session.getAttribute("uid") != null) {
+			User u = (User) session.getAttribute("uid");
+			return u;
+		}else {
+			User u = new User();
+			u.setUid(0);
+			return u;
+		}
+	}
+	
+	//注销session域中的值
+	@RequestMapping("logoutUser")
+	public String logoutUser(HttpSession session) {
+		User u = new User();
+		u.setUid(0);
+		session.setAttribute("uid", u);
+		return "{\"result\":\"注销成功\"}";
+	}
+	
 	
 	
 	

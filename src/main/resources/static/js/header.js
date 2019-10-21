@@ -52,8 +52,61 @@ $(function(){
 	 //点击购物车进入购物车界面
 	 $(".goToShopCar").bind("click",function(){
 //		 console.log(111);
-		 location.href="shopCar.html"
+		$.ajax({
+			type:"post",
+			url:"sessionUser",
+			data:{},
+			dataType:"json",
+			success:function(data){
+				console.log(data.result);
+				if (data.result == 0){
+					alert("请先登录在选购商品！！")
+					location.href="login.html"
+				}else{
+					console.log("yes");
+					location.href="shopCar.html"
+				}
+				
+			}
+		
+		})		 
 	 })
+	  //页面初始化用户中心 用户名字显示或则  请登录显示
+	 $.ajax({
+			type:"post",
+			url:"sessionUser",
+			data:{},
+			dataType:"json",
+			success:function(data){
+				console.log(data.uid);
+				if (data.uid == 0){
+//					console.log(111);
+					$(".loginuser01").children().remove();
+					$(".loginuser01").append("<a href='login.html'>您好！！请登录</a>")
+				}else{
+					$(".loginuser01").children().remove();
+					$(".loginuser01").append("<a>你好！"+data.uname+"！！</a><a id='logoutuser1'>用户注销</a><span>&gt;</span>")
+				}
+				
+			}
+		
+		})	
+		
+		$(document).on("click","#logoutuser1",function(){
+			$(".loginuser01").children().remove();
+			$(".loginuser01").append("<a href='login.html'>您好！！请登录</a>")
+			$.ajax({
+				type:"post",
+				url:"logoutUser",
+				data:{},
+				dataType:"json",
+				success:function(data){
+					console.log(data);
+					
+				}
+				
+			})	
+		})
 //	$.ajax({
 //		type:"post",
 //		url:"index",

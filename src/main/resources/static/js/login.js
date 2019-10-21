@@ -18,12 +18,18 @@ $(function(){
 			dataType:"json",
 			success:function(data){
 
-				console.log(111222);
-				console.log(uname);
+//				console.log(111222);
+//				console.log(uname);
 	
-                alert(data.result);
-
-				window.location.href="home_page.html";
+                
+                
+                if (data.result==0){
+                	alert("登录成功");
+                	window.location.href="NavView.html?0100";
+                }else{
+                	alert(data.result);
+                }
+			
 			}	
 		})
 		

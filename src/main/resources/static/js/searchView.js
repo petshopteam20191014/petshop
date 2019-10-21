@@ -2,7 +2,7 @@ $(function(){
 	//获取url地址的参数
 	var url= window.location.href;
 	var indexurl = url.substring(url.lastIndexOf('=') + 1);
-	console.log(decodeURI(indexurl));
+//	console.log(decodeURI(indexurl));
 	
 	$.ajax({
 		type:"post",
@@ -10,7 +10,7 @@ $(function(){
 		data:{"pdname":indexurl},
 		dataType:"json",
 		success:function(data){
-			console.log(data);
+//			console.log(data);
 			var $proview = $(".productView>div:eq(2)>ul");
 			var $rexiao = $(".rexiao")
 			for (var x in data){

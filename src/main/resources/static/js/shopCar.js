@@ -1,6 +1,23 @@
 $(function(){
 	//设置假数据userid=1
-	var userid = 1;
+//	var userid = 1;
+	$.ajax({
+		type:"post",
+		url:"sessionUser",
+		data:{},
+		dataType:"json",
+		success:function(data){
+			console.log(data.uid);
+			heng(data.uid);
+			
+			
+		}
+	
+	})	
+	
+	function heng(userid){
+		
+
 	$.ajax({
 		type:"post",
 		url:"shopCarAllPro",
@@ -230,6 +247,8 @@ $(function(){
 		
 	})
 	
+	
+	}
 
 	
 	

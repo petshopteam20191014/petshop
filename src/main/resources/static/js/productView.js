@@ -298,31 +298,49 @@ $(function(){
 		var num = $(".rightView>ul:eq(1)>li:eq(0) input").val();
 		var num1 = $(".stocks01").text();
 		console.log(num1);
-		var userid = 1;
-		if (num > num1){
-			alert("输入的商品数量超过改型号商品的库存最大值");
-		}else{
-			//提交数据到购物车表格
-			var colorId = $(".rightView>ul>li:eq(2) ul").children(".selected").find("input").val();
-			var sizeId = $(".rightView>ul>li:eq(3) ul").children(".selected").find("input").val();
-			var tasteId = $(".rightView>ul>li:eq(4) ul").children(".selected").find("input").val();
-			var sfId = $(".rightView>ul>li:eq(5) ul").children(".selected").find("input").val();
-			var scid = index + colorId + cw + sfId + tasteId + sizeId;
-			console.log(scid);
-			$.ajax({
-				type:"post",
-				url:"insertShopCar",
-				data:{"userid":userid,"scid":scid,"snum":num},
-				dataType:"json",
-				success:function(data){
-					console.log(data);
-					
+		//验证用户是否登录
+		$.ajax({
+			type:"post",
+			url:"sessionUser",
+			data:{},
+			dataType:"json",
+			success:function(data){
+				console.log(data.uid);
+				if (data.uid == 0){
+					alert("请先登录在选购商品！！")
+					location.href="login.html"
+				}else{
+					console.log("yes");
+					heng(data.uid);
 				}
-				
-			})
-			
-			
-			
+			}
+		
+		})	
+		function heng(userid){
+//		var userid = 1;
+			if (num > num1){
+				alert("输入的商品数量超过改型号商品的库存最大值");
+			}else{
+				//提交数据到购物车表格
+				var colorId = $(".rightView>ul>li:eq(2) ul").children(".selected").find("input").val();
+				var sizeId = $(".rightView>ul>li:eq(3) ul").children(".selected").find("input").val();
+				var tasteId = $(".rightView>ul>li:eq(4) ul").children(".selected").find("input").val();
+				var sfId = $(".rightView>ul>li:eq(5) ul").children(".selected").find("input").val();
+				var scid = index + colorId + cw + sfId + tasteId + sizeId;
+				console.log(scid);
+				$.ajax({
+					type:"post",
+					url:"insertShopCar",
+					data:{"userid":userid,"scid":scid,"snum":num},
+					dataType:"json",
+					success:function(data){
+						console.log(data);
+						alert("商品加入成功");
+						
+					}
+					
+				})
+			}
 		}
 	})
 	

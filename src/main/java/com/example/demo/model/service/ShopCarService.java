@@ -24,7 +24,7 @@ public class ShopCarService {
 		for (ShopCar x : list) {
 //			System.out.println(x.getProductdetail().getPdid());
 			String id = x.getProductdetail().getPdid().substring(0,5);
-			System.out.println(id);
+//			System.out.println(id);
 			x.getProductdetail().setPicture(pictureMapper.selectById(id));
 //			System.out.println(pictureMapper.selectById(id).get(0).getPictureName());
 		}
