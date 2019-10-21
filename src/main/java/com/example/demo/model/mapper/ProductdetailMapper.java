@@ -80,6 +80,10 @@ public interface ProductdetailMapper {
 	@ResultMap("productResult")
 	public Productdetail2 selectProByPdid(String pdid);
 	
+	//通过部分名字搜索商品
+	@Select("select * from productdetail where pdname like '%${pdname}%' group by pdname")
+	@ResultMap("productResult")
+	public List<Productdetail2> selectPartByName(String pdname);
 	
 	
 	

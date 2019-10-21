@@ -132,16 +132,16 @@ $(function(){
 	$(document).on("click",".delete01",function(){
 		var scid = $(this).next().val();
 		console.log($(this).next().val());
-//		$.ajax({
-//			type:"post",
-//			url:"deleteShopCarOne",
-//			data:{"scid":scid,"userid":userid},
-//			dataType:"json",
-//			success:function(data){
-//				console.log(data);
-//			}
-//			
-//		})	
+		$.ajax({
+			type:"post",
+			url:"deleteShopCarOne",
+			data:{"scid":scid,"userid":userid},
+			dataType:"json",
+			success:function(data){
+				console.log(data);
+			}
+			
+		})	
 		//金额发生变化
 		var shopCar01 = $(".shopCar01").children("p").eq(3).children("span").text();
 		var cost = $(this).parent().prev().text();
@@ -169,16 +169,16 @@ $(function(){
 //				console.log(111);
 //				console.log($(this).find(".delete01").next().val());
 				var scid = $(this).find(".delete01").next().val();
-//				$.ajax({
-//					type:"post",
-//					url:"deleteShopCarOne",
-//					data:{"scid":scid,"userid":userid},
-//					dataType:"json",
-//					success:function(data){
-//						console.log(data);
-//					}
-//				
-//				})	
+				$.ajax({
+					type:"post",
+					url:"deleteShopCarOne",
+					data:{"scid":scid,"userid":userid},
+					dataType:"json",
+					success:function(data){
+						console.log(data);
+					}
+				
+				})	
 				$(".shopCar01").children("p").eq(3).children("span").text(0);
 				$(".shopCar02>p").children("span").eq(0).text(0);	
 				$(".shopCar02>p").children("span").eq(1).text(0);

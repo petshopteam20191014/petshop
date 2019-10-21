@@ -26,6 +26,7 @@ public class ShopCarController {
 	    //查询
 	    @RequestMapping("shopCarAllPro")
 	    public List<ShopCar> shopCarAllPro(int userid){
+//	    	System.out.println(userid + "+111111111111");
 	    	return shopCarService.shopCarAllPro(userid);
 	    };
 	    

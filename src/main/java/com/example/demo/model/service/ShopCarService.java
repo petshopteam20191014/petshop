@@ -18,10 +18,13 @@ public class ShopCarService {
 	
 	public List<ShopCar> shopCarAllPro(int userid){
 		List<ShopCar> list = shopCarMapper.shopCarAllPro(userid);
+//		System.out.println(list);
+//		System.out.println(111111);
 		//给每个商品匹配对应的图片
 		for (ShopCar x : list) {
+//			System.out.println(x.getProductdetail().getPdid());
 			String id = x.getProductdetail().getPdid().substring(0,5);
-//			System.out.println(id);
+			System.out.println(id);
 			x.getProductdetail().setPicture(pictureMapper.selectById(id));
 //			System.out.println(pictureMapper.selectById(id).get(0).getPictureName());
 		}

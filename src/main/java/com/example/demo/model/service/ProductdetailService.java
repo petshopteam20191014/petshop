@@ -72,7 +72,16 @@ public class ProductdetailService {
 		return productdetailMapper.selectOnePicStocks(pdid);
 	};
 	
-	
+	public List<Productdetail2> selectPartByName(String pdname) {
+		List<Productdetail2> list = productdetailMapper.selectPartByName(pdname);
+		//给每个商品匹配对应的图片
+		for (Productdetail2 x : list) {
+			String id = x.getPdid().substring(0,5);
+			x.setPicture(pictureMapper.selectById(id));
+//			System.out.println(id);
+		}
+		return list;
+	};
 	
 	
 	

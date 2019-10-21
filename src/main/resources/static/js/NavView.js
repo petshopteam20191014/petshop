@@ -74,7 +74,7 @@ $(function(){
 		data:{"id":index},
 		dataType:"json",
 		success:function(data){
-			console.log(data);
+//			console.log(data);
 			var $proview = $(".productView>div:eq(2)>ul");
 			var $rexiao = $(".rexiao")
 			for (var x in data){

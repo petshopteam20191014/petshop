@@ -42,6 +42,11 @@ $(function(){
 		 $(this).removeClass("mainNavCss");
 	 })
 	 
+	 //点击搜索摁妞
+	 $(".searchByn").bind("click",function(){
+		 var txt = $(".searchTxt").val();
+		 location.href="searchView.html?txt="+txt;
+	 })
 
 //	$.ajax({
 //		type:"post",

@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -98,8 +100,20 @@ public class ProductdetailController {
 	public Productdetail2 selectOnePicStocks(String pdid) {
 		return productdetailService.selectOnePicStocks(pdid);
 	};
-
-	
+	 //根据部分名字查询
+	@RequestMapping("selectPartByName")
+	public List<Productdetail2> selectPartByName(String pdname) {
+		String pdname01 =null;
+		try {
+			pdname01 = URLDecoder.decode(pdname,"utf-8");
+			
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+//		System.out.println(pdname01);
+		return productdetailService.selectPartByName(pdname01);
+	};
 	
 	
 	
