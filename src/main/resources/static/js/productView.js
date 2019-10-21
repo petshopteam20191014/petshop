@@ -135,7 +135,7 @@ $(function(){
 //				console.log(tasteId);
 //				console.log(sfId);
 		var pdid = index + colorId + cw + sfId + tasteId + sizeId;
-		console.log(pdid);
+//		console.log(pdid);
 		//根据pdid查询库存数量 更新该型号库存
 		$.ajax({
 			type:"post",

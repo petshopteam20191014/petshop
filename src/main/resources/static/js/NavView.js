@@ -108,10 +108,11 @@ $(function(){
 		success:function(data){
 			var $rexiao = $(".rexiao")
 			for (var x = 0; x < 4; x ++){
+				var pdid =data[x].pdid;
 				$rexiao.append('<li>'
 							+			'<ul class="rexiao01">'
 							+			'<li><img src="img/product/'+data[x].picture[0].pictureName+'" ></li>'
-							+			'<li><a href="#" style="color:#1B1B15">'+data[x].pdname+'</a></li>'
+							+			'<li><a href="productView.html?'+pdid+'" style="color:#1B1B15">'+data[x].pdname+'</a></li>'
 							+			'<li>&yen;&nbsp;'+data[x].cost+'</li>'
 							+		'</ul>'
 							+	'</li>');
