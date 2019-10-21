@@ -37,6 +37,12 @@ public class ShopCarController {
 	    	shopCarService.deleteShopCarOne(userid, scid);
 	    	return "{\"result\":\"yes\"}";
 	    }
+	    //插入
+	    @RequestMapping("insertShopCar")
+	    public String insertShopCar(String scid,int userid,int snum) {
+	    	shopCarService.insertShopCar(scid, userid, snum);
+	    	return "{\"result\":\"yes\"}";
+	    }
 	    
 	    
 }

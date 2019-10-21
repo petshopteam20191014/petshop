@@ -15,8 +15,8 @@ import com.example.demo.model.bean.ShopCar;
 
 @Mapper
 public interface ShopCarMapper {
-    @Insert("insert into shopcar() values()")
-	public String insertShopCar(String pdid,int uid,int amount);
+    @Insert("insert into shopcar values(#{scid},#{userid},#{snum})")
+	public void insertShopCar(String scid,int userid,int snum);
     
     
     //查询该用户下，购物车内的所有商品

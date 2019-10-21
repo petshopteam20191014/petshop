@@ -144,7 +144,7 @@ $(function(){
 			dataType:"json",
 			success:function(data){
 //				console.log(data.stocks);	
-				$(".rightView>ul:eq(1)>li:eq(2)").html("<p>该型号库存:</p><p>"+data.stocks+"</p>");
+				$(".rightView>ul:eq(1)>li:eq(2)").html("<p>该型号库存:</p><p class='stocks01'>"+data.stocks+"</p>");
 				$(".rightView>ul:eq(1)>li:eq(2)").find("p").css({"float":"left","margin-left":"0px","padding-left":"0px"});
 //				$(".rightView>ul:eq(1)>li:eq(2)").find("div").css("width","115px");
 				//对数量上下线进行控制
@@ -294,11 +294,35 @@ $(function(){
 	})
 	
 	//点击购物车
-	$("#pvBtn").bind("click",function(){
+	$(document).on("click","#pvBtn",function(){
 		var num = $(".rightView>ul:eq(1)>li:eq(0) input").val();
-		var num1 = $(".rightView>ul:eq(1)>li:eq(2)").find("span").text();
+		var num1 = $(".stocks01").text();
+		console.log(num1);
+		var userid = 1;
 		if (num > num1){
 			alert("输入的商品数量超过改型号商品的库存最大值");
+		}else{
+			//提交数据到购物车表格
+			var colorId = $(".rightView>ul>li:eq(2) ul").children(".selected").find("input").val();
+			var sizeId = $(".rightView>ul>li:eq(3) ul").children(".selected").find("input").val();
+			var tasteId = $(".rightView>ul>li:eq(4) ul").children(".selected").find("input").val();
+			var sfId = $(".rightView>ul>li:eq(5) ul").children(".selected").find("input").val();
+			var scid = index + colorId + cw + sfId + tasteId + sizeId;
+			console.log(scid);
+			$.ajax({
+				type:"post",
+				url:"insertShopCar",
+				data:{"userid":userid,"scid":scid,"snum":num},
+				dataType:"json",
+				success:function(data){
+					console.log(data);
+					
+				}
+				
+			})
+			
+			
+			
 		}
 	})
 	

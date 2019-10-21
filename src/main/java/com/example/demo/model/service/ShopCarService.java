@@ -15,9 +15,6 @@ public class ShopCarService {
 	private ShopCarMapper shopCarMapper;
 	@Autowired
 	private PictureMapper pictureMapper;
-	public String insertShopCar(String pdid,int uid,int amount){
-    	return null;
-    }
 	
 	public List<ShopCar> shopCarAllPro(int userid){
 		List<ShopCar> list = shopCarMapper.shopCarAllPro(userid);
@@ -33,5 +30,9 @@ public class ShopCarService {
 	
 	public void deleteShopCarOne(int userid,String scid){
 		shopCarMapper.deleteShopCarOne(userid, scid);
+	};
+	
+	public void insertShopCar(String scid,int userid,int snum) {
+		shopCarMapper.insertShopCar(scid, userid, snum);
 	};
 }
