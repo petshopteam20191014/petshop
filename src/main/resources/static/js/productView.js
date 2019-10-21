@@ -135,7 +135,7 @@ $(function(){
 //				console.log(tasteId);
 //				console.log(sfId);
 		var pdid = index + colorId + cw + sfId + tasteId + sizeId;
-//				console.log(pdid);
+		console.log(pdid);
 		//根据pdid查询库存数量 更新该型号库存
 		$.ajax({
 			type:"post",
@@ -143,7 +143,7 @@ $(function(){
 			data:{"pdid":pdid},
 			dataType:"json",
 			success:function(data){
-//				console.log(data.stocks);	
+//				console.log(data.stocks);
 				$(".rightView>ul:eq(1)>li:eq(2)").html("<p>该型号库存:</p><p class='stocks01'>"+data.stocks+"</p>");
 				$(".rightView>ul:eq(1)>li:eq(2)").find("p").css({"float":"left","margin-left":"0px","padding-left":"0px"});
 //				$(".rightView>ul:eq(1)>li:eq(2)").find("div").css("width","115px");

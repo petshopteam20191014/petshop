@@ -98,7 +98,14 @@ public class ProductdetailController {
 	//根据ID查询单个商品
 	@RequestMapping("selectOnePicStocks")
 	public Productdetail2 selectOnePicStocks(String pdid) {
-		return productdetailService.selectOnePicStocks(pdid);
+		Productdetail2 p = productdetailService.selectOnePicStocks(pdid);
+		if (p != null) {
+			return p;
+		}else {
+			Productdetail2 p1 = new Productdetail2();
+			p1.setStocks(0);
+			return p1;
+		}
 	};
 	 //根据部分名字查询
 	@RequestMapping("selectPartByName")
