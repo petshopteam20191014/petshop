@@ -1,4 +1,6 @@
 $(function(){
+	//点击购物车时，出现选择属性的小窗口
+	$("#minwindow").hide();
 	//获取url地址的参数
 	var url= window.location.href;
 	var index = url.substring(url.lastIndexOf('?') + 1);
@@ -124,8 +126,7 @@ $(function(){
 
 	
 	
-	//点击购物车时，出现选择属性的小窗口
-	$("#minwindow").hide();
+
 	$(document).on("click",".shopcar",function(){
 		//当点击购物时，显示小窗口
 		$("#minwindow").show();
