@@ -48,6 +48,12 @@ $(function(){
 		 location.href="searchView.html?txt="+txt;
 	 })
 
+	 
+	 //点击购物车进入购物车界面
+	 $(".goToShopCar").bind("click",function(){
+//		 console.log(111);
+		 location.href="shopCar.html"
+	 })
 //	$.ajax({
 //		type:"post",
 //		url:"index",

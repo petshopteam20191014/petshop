@@ -327,6 +327,9 @@ $(function(){
 					}
 					
 				})
+				
+				alert("加入购物车成功");
+				$("#minwindow").hide();
 			}
 		})
 		
