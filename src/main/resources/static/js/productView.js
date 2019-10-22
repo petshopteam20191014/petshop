@@ -335,6 +335,8 @@ $(function(){
 					dataType:"json",
 					success:function(data){
 						console.log(data);
+						var shopCount = parseInt($(".shopCarCount").text()) + 1
+						$(".shopCarCount").text(shopCount)
 						alert("商品加入成功");
 						
 					}

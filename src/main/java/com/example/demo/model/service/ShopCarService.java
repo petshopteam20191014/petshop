@@ -38,4 +38,9 @@ public class ShopCarService {
 	public void insertShopCar(String scid,int userid,int snum) {
 		shopCarMapper.insertShopCar(scid, userid, snum);
 	};
+	
+	 public int shopCarNum(int userid) {
+		 return shopCarMapper.shopCarNum(userid);
+	 };
+	
 }

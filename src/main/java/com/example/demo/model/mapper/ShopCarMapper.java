@@ -31,4 +31,10 @@ public interface ShopCarMapper {
     //根据用户id和商品pdid删除
     @Delete("delete from shopcar where userid = #{userid} and scid = #{scid}")
     public void deleteShopCarOne(int userid,String scid);
+    
+    //查询该用户下商品个数
+    @Select("select count(*) from shopcar where userid=#{userid}")
+    public int shopCarNum(int userid);
+    
+    
 }

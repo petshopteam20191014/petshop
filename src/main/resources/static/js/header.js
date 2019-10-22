@@ -86,6 +86,17 @@ $(function(){
 				}else{
 					$(".loginuser01").children().remove();
 					$(".loginuser01").append("<a>你好！"+data.uname+"！！</a><a id='logoutuser1'>用户注销</a><span>&gt;</span>")
+					//查询该用户下购物车商品的数量
+					 $.ajax({
+						type:"post",
+						url:"shopCarNum",
+						data:{"userid":data.uid},
+						dataType:"json",
+						success:function(data){
+//							console.log(data);
+							$(".shopCarCount").text(data.result).css("color","coral");
+						}
+					 })
 				}
 				
 			}

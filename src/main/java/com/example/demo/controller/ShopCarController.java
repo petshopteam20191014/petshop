@@ -45,5 +45,11 @@ public class ShopCarController {
 	    	return "{\"result\":\"yes\"}";
 	    }
 	    
+	    @RequestMapping("shopCarNum")
+	    public String shopCarNum(int userid) {
+	    	int num = shopCarService.shopCarNum(userid);
+	    	return "{\"result\":\""+num+"\"}"; 
+	    }
+	    
 	    
 }

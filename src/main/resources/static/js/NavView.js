@@ -66,7 +66,7 @@ $(function(){
 			$pic.next().hide();
 		}
 	}
-	setInterval(pictureAuto,2000);
+	setInterval(pictureAuto,1000);
 	
 	
 
@@ -92,6 +92,7 @@ $(function(){
 								+	'</ul>'
 								+'</li>')
 //				console.log(data[x]);
+				
 			}
 			
 			
@@ -142,6 +143,7 @@ $(function(){
 			var tasteId = $("#minwindow>ul>li:eq(4) ul").children(".selected").find("input").val();
 			var sfId = $("#minwindow>ul>li:eq(5) ul").children(".selected").find("input").val();
 			var pdid = index01 + colorId + 2 + sfId + tasteId + sizeId;
+			$("#pvBtn").next().val(index01);
 //					console.log(pdid);
 			//根据pdid查询库存数量 更新该型号库存
 			$.ajax({
@@ -301,11 +303,14 @@ $(function(){
 			
 		})
 		
-		//点击购物车
-		$(document).on("click","#pvBtn",function(){
+	})
+	
+	//点击购物车
+		$("#pvBtn").bind("click",function(){
+			var index01 = $("#pvBtn").next().val();
 			var num = $("#minwindow>ul:eq(1)>li:eq(0) input").val();
 			var num1 = $(".stocks01").text();
-//			console.log(num1);
+			console.log(123);
 			//验证用户是否登录
 			$.ajax({
 				type:"post",
@@ -315,11 +320,12 @@ $(function(){
 				success:function(data){
 					console.log(data.uid);
 					if (data.uid == 0){
-						alert("请先登录在选购商品！！")
-						location.href="login.html"
+						alert("请先登录在选购商品！！");
+						location.href="login.html";
 					}else{
 						console.log("yes");
 						heng(data.uid);
+//						return false;
 					}
 					
 				}
@@ -343,20 +349,18 @@ $(function(){
 						data:{"userid":userid,"scid":scid,"snum":num},
 						dataType:"json",
 						success:function(data){
-							console.log(data);
+//							console.log(data);
 							
 						}
 						
 					})
-					
+					var shopCount = parseInt($(".shopCarCount").text()) + 1;
+					$(".shopCarCount").text(shopCount);
 					alert("加入购物车成功");
 					$("#minwindow").hide();
 				}
 			}
 		})
-		
-		
-	})
 	
 	//当点击小窗口外的界面的时候，小窗口隐藏
 	$("#header").bind("click",function(){
