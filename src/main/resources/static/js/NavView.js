@@ -84,7 +84,7 @@ $(function(){
 //				console.log($pdid);
 				$proview.append('<li>'
 								+	'<ul>'
-								+		'<li><input class="pdid01" type="hidden" value="'+pdid+'"/><img src="img/product/'+data[x].picture[0].pictureName+'" ></li>'
+								+		'<li><input class="pdid01" type="hidden" value="'+pdid+'"/><a href="productView.html?'+pdid+'"><img src="img/product/'+data[x].picture[0].pictureName+'" ></a></li>'
 								+		'<li><a href="productView.html?'+pdid+'" style="color:#1B1B15">'+data[x].pdname+'</a></li>'
 								+		'<li  class="brand01"><a  href="productView.html?'+pdid+'" style="color: #666666;">品牌样式:<span>'+data[x].brand.bname+'</span></a></li>'
 								+		'<li>&yen;&nbsp;'+data[x].cost+'</li>'
@@ -111,7 +111,7 @@ $(function(){
 				var pdid =data[x].pdid;
 				$rexiao.append('<li>'
 							+			'<ul class="rexiao01">'
-							+			'<li><img src="img/product/'+data[x].picture[0].pictureName+'" ></li>'
+							+			'<li><a href="productView.html?'+pdid+'"><img src="img/product/'+data[x].picture[0].pictureName+'" ></a></li>'
 							+			'<li><a href="productView.html?'+pdid+'" style="color:#1B1B15">'+data[x].pdname+'</a></li>'
 							+			'<li>&yen;&nbsp;'+data[x].cost+'</li>'
 							+		'</ul>'
