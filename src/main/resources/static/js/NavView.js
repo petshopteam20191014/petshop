@@ -157,6 +157,7 @@ $(function(){
 					$("#minwindow>ul:eq(1)>li:eq(2)").find("p").css({"float":"left","margin-left":"0px","padding-left":"0px"});
 //					$(".rightView>ul:eq(1)>li:eq(2)").find("div").css("width","115px");
 					//对数量上下线进行控制
+//					console.log(data.stocks);
 					$("#minwindow>ul:eq(1)>li:eq(0) input").attr({"min":"1","max":data.stocks});
 				}
 				
@@ -310,7 +311,7 @@ $(function(){
 			var index01 = $("#pvBtn").next().val();
 			var num = $("#minwindow>ul:eq(1)>li:eq(0) input").val();
 			var num1 = $(".stocks01").text();
-			console.log(123);
+//			console.log(123);
 			//验证用户是否登录
 			$.ajax({
 				type:"post",
@@ -318,12 +319,12 @@ $(function(){
 				data:{},
 				dataType:"json",
 				success:function(data){
-					console.log(data.uid);
+//					console.log(data.uid);
 					if (data.uid == 0){
 						alert("请先登录在选购商品！！");
 						location.href="login.html";
 					}else{
-						console.log("yes");
+//						console.log("yes");
 						heng(data.uid);
 //						return false;
 					}
@@ -342,7 +343,7 @@ $(function(){
 					var tasteId = $("#minwindow>ul>li:eq(4) ul").children(".selected").find("input").val();
 					var sfId = $("#minwindow>ul>li:eq(5) ul").children(".selected").find("input").val();
 					var scid = index01 + colorId + 2 + sfId + tasteId + sizeId;
-					console.log(scid);
+//					console.log(scid);
 					$.ajax({
 						type:"post",
 						url:"insertShopCar",
